@@ -17,7 +17,7 @@ if (( UID == 0 )); then
 	src_dir="$system_dir/src"
 	rubies_dir="/opt/rubies"
 else
-	src_dir="$HOME/src"
+	src_dir="$HOME/.cache/ruby"
 	rubies_dir="$HOME/.rubies"
 fi
 
