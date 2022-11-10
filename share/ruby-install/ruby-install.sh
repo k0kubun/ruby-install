@@ -276,7 +276,11 @@ function init()
 	fi
 
 	ruby_cache_dir="$ruby_install_cache_dir/$ruby"
-	install_dir="${install_dir:-$rubies_dir/$ruby-$ruby_version}"
+	if [[ "$ruby" == "ruby" ]]; then
+		install_dir="${install_dir:-$rubies_dir/$ruby_version}"
+	else
+		install_dir="${install_dir:-$rubies_dir/$ruby-$ruby_version}"
+	fi
 
 	source "$ruby_install_dir/functions.sh"       || return $?
 	source "$ruby_install_dir/$ruby/functions.sh" || return $?
