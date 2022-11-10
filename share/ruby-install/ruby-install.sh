@@ -18,7 +18,7 @@ if (( UID == 0 )); then
 	rubies_dir="/opt/rubies"
 else
 	src_dir="$HOME/.cache/ruby"
-	rubies_dir="$HOME/.rubies"
+	rubies_dir="/opt/rubies"
 fi
 
 source "$ruby_install_dir/logging.sh"
